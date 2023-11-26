@@ -34,11 +34,3 @@ This component is a form designed to collect lead information. It includes vario
 ## Usage
 
 Ensure the component is integrated into your React application correctly. Modify the props and styles as needed to fit your project requirements.
-
-## Contributions
-
-Contributions are welcome! Feel free to fork this repository and submit pull requests for improvements or additional features.
-
-## License
-
-[Insert License information here]
