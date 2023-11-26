@@ -12,7 +12,6 @@ import GoogleMapReact from "google-map-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from "react-time-picker";
-import moment from "moment";
 import "react-time-picker/dist/TimePicker.css";
 const FormComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -22,7 +21,7 @@ const FormComponent = () => {
   const customInput = (
     <input
       type="text"
-      value={selectedDate ? moment(selectedDate).format("DD MMMM YYYY") : ""}
+      value={selectedDate}
       readOnly
       name="dateval"
     />
