@@ -19,12 +19,7 @@ const FormComponent = () => {
   const [time, settime] = useState("");
 
   const customInput = (
-    <input
-      type="text"
-      value={selectedDate}
-      readOnly
-      name="dateval"
-    />
+    <input type="text" value={selectedDate} readOnly name="dateval" />
   );
   const [formData, setFormData] = useState({
     name: "",
@@ -33,10 +28,10 @@ const FormComponent = () => {
     address: "",
     options: "",
     products: "",
-    value:"",
-    timeval:"",
-    dateval:"",
-    note:""
+    value: "",
+    timeval: "",
+    dateval: "",
+    note: "",
   });
   const defaultProps = {
     center: {
@@ -48,11 +43,11 @@ const FormComponent = () => {
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
-    formData.dateval = date
+    formData.dateval = date;
   };
   const handleTimeChange = (time) => {
     settime(time);
-    formData.timeval = time
+    formData.timeval = time;
   };
 
   const handleChange = (e) => {
@@ -78,7 +73,7 @@ const FormComponent = () => {
             <img
               src={Icon4}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <input
               type="text"
@@ -86,7 +81,7 @@ const FormComponent = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
+              className="border rounded-md w-full p-3 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
               required
             />
           </div>
@@ -99,7 +94,7 @@ const FormComponent = () => {
             <img
               src={Icon2}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <input
               type="email"
@@ -107,7 +102,7 @@ const FormComponent = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Example@anyemail.com"
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
+              className="border rounded-md w-full p-3 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
               required
             />
           </div>
@@ -120,7 +115,7 @@ const FormComponent = () => {
             <img
               src={Icon1}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <input
               type="tel"
@@ -129,7 +124,7 @@ const FormComponent = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="+91 8800688763"
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
+              className="border rounded-md w-full p-3 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
               required
             />
           </div>
@@ -142,7 +137,7 @@ const FormComponent = () => {
             <img
               src={Icon5}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <input
               type="text"
@@ -150,7 +145,7 @@ const FormComponent = () => {
               value={formData.address}
               onChange={handleChange}
               placeholder="Gugurgram ,India"
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
+              className="border rounded-md w-full p-3 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
             />
           </div>
         </div>
@@ -169,7 +164,7 @@ const FormComponent = () => {
             <img
               src={Icon9}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <input
               type="number"
@@ -177,7 +172,7 @@ const FormComponent = () => {
               value={formData.saleValue}
               onChange={handleChange}
               placeholder="50,00,000"
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
+              className="border rounded-md w-full p-3 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
             />
           </div>
         </div>
@@ -189,7 +184,7 @@ const FormComponent = () => {
             <img
               src={Icon3}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4 z-10"
+              className="absolute h-5 w-5 left-6 top-[20px] z-10"
             />
             <DatePicker
               selected={selectedDate}
@@ -199,7 +194,7 @@ const FormComponent = () => {
               dateFormat="dd MMMM yyyy"
               placeholderText="29 August 2023"
               customInput={customInput}
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300"
+              className="border rounded-md w-full p-3 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300"
             />
             <div></div>
           </div>
@@ -210,10 +205,9 @@ const FormComponent = () => {
           </label>
           <div className="relative">
             <img
-              
               src={Icon6}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4 z-10"
+              className="absolute h-5 w-5 left-6 top-[20px] z-10"
             />
 
             <TimePicker
@@ -221,7 +215,7 @@ const FormComponent = () => {
               name="timeval"
               value={time}
               format="HH:mm a"
-              className="!w-full !p-2 !pl-14 !mt-1"
+              className="!w-full !p-3 !pl-20 !mt-1"
               disableClock={true}
               clockIcon={false}
               clearIcon={false}
@@ -238,16 +232,17 @@ const FormComponent = () => {
             <img
               src={Icon8}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <select
               name="options"
               value={formData.options}
               onChange={handleChange}
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
-              defaultValue={0}
+              className="border rounded-md w-full p-4 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
             >
-              <option value="0">Select Options</option>
+              <option value="0" hidden>
+                Select Options
+              </option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -263,16 +258,16 @@ const FormComponent = () => {
             <img
               src={Icon7}
               alt="Logo"
-              className="absolute h-5 w-5 left-3 top-4"
+              className="absolute h-5 w-5 left-6 top-[20px]"
             />
             <select
               name="products"
               onChange={handleChange}
               value={formData.products}
-              className="border rounded-md w-full p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
+              className="border rounded-md w-full p-4 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
               defaultValue={0}
             >
-              <option value="0"></option>
+              <option value="0" hidden></option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -282,18 +277,16 @@ const FormComponent = () => {
         </div>
         <div className="pt-5">
           <label htmlFor="note" className="block text-base font-bold pl-2">
-            Note<span className="text-red-500">*</span>
+            Note
           </label>
           <div className="relative">
             <textarea
               name="note"
-              row="10"
-              cols="50"
+              rows="5"
               value={formData.note}
               onChange={handleChange}
               placeholder="Enter note"
-              className="border rounded-md w-full resize-none p-2 pl-14 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
-              required
+              className="border rounded-md w-full re3ize-none p-2 pl-20 mt-1 focus:outline-none focus:ring focus:border-blue-300 text-base"
             />
           </div>
         </div>
